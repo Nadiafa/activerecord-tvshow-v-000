@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   
   def self.most_popular_show
     # returns the tv show with the highest rating
-    self.highest_rating
+    self.where
   end 
   
   
