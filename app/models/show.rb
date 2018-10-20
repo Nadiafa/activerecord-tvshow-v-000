@@ -1,6 +1,6 @@
 class Show < ActiveRecord::Base
   def self.highest_rating
-    maximum(:rating)
+    self.maximum(:rating)
   end 
   
   def self.most_popular_show
@@ -13,7 +13,7 @@ class Show < ActiveRecord::Base
   
   def self.least_popular_show
     # returns the tv show with the lowest rating
-    
+    self.where("rating = ?", self.lowest_rating).first
   end 
   
   
