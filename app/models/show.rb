@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
   
-  self.maximum(:rating)
+  Show.maximum(:rating)
   
 end 
