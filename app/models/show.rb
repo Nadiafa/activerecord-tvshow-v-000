@@ -1,5 +1,5 @@
 require 'active_record'
 
 class Show < ActiveRecord::Base
-  puts "xxxx"
+  binding.pry
 end 
