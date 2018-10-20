@@ -11,9 +11,9 @@ class Show < ActiveRecord::Base
     minimum(:rating)
   end 
   
-  
   def self.least_popular_show
     # returns the tv show with the lowest rating
+    
   end 
   
   
