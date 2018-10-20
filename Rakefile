@@ -1,6 +1,8 @@
 require_relative 'config/environment.rb'
 
-task do 
+task :console do
+  Pry.start 
+end 
 
 namespace :db do
 
