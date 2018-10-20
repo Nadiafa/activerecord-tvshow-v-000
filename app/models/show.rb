@@ -4,9 +4,7 @@ class Show < ActiveRecord::Base
   end 
   
   def self.most_popular_show
-    # returns the tv show with the highest rating
-    self.find_by(:rating).where(highest_rating)
-    
+    self.where("rating = ?", self.highest_rating).first
   end 
   
   
