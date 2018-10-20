@@ -16,9 +16,9 @@ class Show < ActiveRecord::Base
     self.where("rating = ?", self.lowest_rating).first
   end 
   
-  
   def self.ratings_sum
     # returns the sum of all the ratings of all the tv shows
+    self.sum(:rating)
   end 
   
   
