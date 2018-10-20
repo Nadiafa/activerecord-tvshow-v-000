@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   
   def self.most_popular_show
     # returns the tv show with the highest rating
-    "SELECT * WHERE rating = ?", self.highest_rating
+    select(:name).highest_rating
   end 
   
   
