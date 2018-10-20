@@ -24,7 +24,7 @@ class Show < ActiveRecord::Base
   
   def self.popular_shows
     # returns an array of all of the shows with a rating above 5
-    self.
+    self.select("*").where("rating > 5")
   end 
   
   
